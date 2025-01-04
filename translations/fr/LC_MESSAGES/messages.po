@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-03 22:05-0600\n"
+"POT-Creation-Date: 2025-01-03 22:48-0600\n"
 "PO-Revision-Date: 2024-12-29 21:42-0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -157,7 +157,7 @@ msgstr "Aucun modèle trouvé"
 msgid "Please enter a model name"
 msgstr "Veuillez entrer un nom de modèle"
 
-#: static/js/main.js:433 templates/index.html:80
+#: static/js/main.js:433 templates/index.html:60
 msgid "Starting the download..."
 msgstr "Démarrage du téléchargement..."
 
@@ -286,7 +286,7 @@ msgid "Ollama Model Manager"
 msgstr "Gestionnaire de Modèles Ollama"
 
 #: templates/index.html:6
-msgid "Ollama Manager"
+msgid "Ollama Manager UI"
 msgstr "Gestionnaire Ollama"
 
 #: templates/index.html:17
@@ -313,84 +313,84 @@ msgstr "Outils"
 msgid "Vision"
 msgstr "Vision"
 
-#: templates/index.html:83
+#: templates/index.html:64
 msgid "Overall Usage Statistics"
 msgstr "Statistiques d'Utilisation Globales"
 
-#: templates/index.html:85
+#: templates/index.html:66
 msgid "Global Usage Statistics"
 msgstr "Statistiques Globales d'Utilisation"
 
-#: templates/index.html:87
+#: templates/index.html:68
 msgid "Statistics will populate here"
 msgstr "Les statistiques s'afficheront ici"
 
-#: templates/index.html:95
+#: templates/index.html:76
 msgid "Local Models"
 msgstr "Modèles Locaux"
 
-#: templates/index.html:98
+#: templates/index.html:79
 msgid "Delete Selected"
 msgstr "Supprimer la Sélection"
 
-#: templates/index.html:101
+#: templates/index.html:82
 msgid "Configure Selected"
 msgstr "Configurer la Sélection"
 
-#: templates/index.html:104
+#: templates/index.html:85
 msgid "Compare Selected"
 msgstr "Comparer la Sélection"
 
-#: templates/index.html:107
+#: templates/index.html:88
 msgid "Select All"
 msgstr "Tout Sélectionner"
 
-#: templates/index.html:115
+#: templates/index.html:96
 msgid "Toggle All Models"
 msgstr "Basculer tous les Modèles"
 
-#: templates/index.html:119 templates/index.html:145
+#: templates/index.html:100 templates/index.html:126
 msgid "Model Name"
 msgstr "Nom du Modèle"
 
-#: templates/index.html:120 templates/index.html:146
+#: templates/index.html:101 templates/index.html:127
 msgid "Date Modified"
 msgstr "Date de Modification"
 
-#: templates/index.html:121 templates/index.html:147
+#: templates/index.html:102 templates/index.html:128
 msgid "Size"
 msgstr "Taille"
 
-#: templates/index.html:122 templates/index.html:148
+#: templates/index.html:103 templates/index.html:129
 msgid "Format"
 msgstr "Format"
 
-#: templates/index.html:123 templates/index.html:149
+#: templates/index.html:104 templates/index.html:130
 msgid "Family"
 msgstr "Famille"
 
-#: templates/index.html:124 templates/index.html:150
+#: templates/index.html:105 templates/index.html:131
 #: templates/modals/config.html:18
 msgid "Parameters"
 msgstr "Paramètres"
 
-#: templates/index.html:125 templates/index.html:151
+#: templates/index.html:106 templates/index.html:132
 msgid "Actions"
 msgstr "Actions"
 
-#: templates/index.html:137
+#: templates/index.html:118
 msgid "Running Models"
 msgstr "Modèles en Cours d'Exécution"
 
-#: templates/index.html:139
+#: templates/index.html:120
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: templates/index.html:172
+#: templates/index.html:153
 msgid "Model Comparison"
 msgstr "Comparaison de Modèles"
 
-#: templates/index.html:180 templates/modals/batch_results.html:10
+#: templates/index.html:161 templates/modals/batch_results.html:10
 #: templates/modals/stats.html:8
 msgid "Close"
 msgstr "Fermer"
