@@ -23,23 +23,23 @@ A web interface to manage your Ollama models, built with Flask and Semantic UI.
 ## Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yblis/OllamaManagerUI.git
+git clone https://github.com/BornSupercharged/OllamaManagerUI.git
 cd OllamaManagerUI
 ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Configuration:
-- Create a .env file and configure the Ollama server URL:
+2. Configuration:
+- Copy the example.env file over to ".env" and update the Ollama server URL if necessary:
 ```bash
 OLLAMA_SERVER_URL=http://localhost:11434
 ```
 
 ## Run Using Python
-Start the application:
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Start the application:
 ```bash
 python main.py
 ```
@@ -80,6 +80,7 @@ The application will be available at `http://localhost:5000`
 source venv/bin/activate
 ```
 
+# Language Translations
 ## Add translations for a new language 
 1. To generate the translation file for all the strings in the project
 ```
@@ -101,7 +102,7 @@ pybabel update -i messages.pot -d translations
 pybabel compile -d translations
 ```
 
-## Add to an existing language translation
+## Update an existing language's translations
 1. To generate the translation file for all the strings in the project
 ```
 pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
@@ -112,7 +113,7 @@ pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
 pybabel update -i messages.pot -d translations
 ```
 
-4. Re-compile the translations
+3. Re-compile the translations
 ```
 pybabel compile -d translations
 ```
