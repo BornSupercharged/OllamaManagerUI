@@ -512,18 +512,18 @@ window.pullModel = async function() {
 
 // Refresh functions
 function formatDate(dateStr) {
-    if (!dateStr) return 'Date inconnue';
+    if (!dateStr) return gettext('Date unknown');
 
     try {
         // Parse the ISO date string with timezone
         const date = new Date(dateStr);
-        if (isNaN(date.getTime())) return 'Date inconnue';
+        if (isNaN(date.getTime())) return gettext('Date unknown');
 
         // Format date as DD/MM/YYYY
         return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
     } catch (error) {
         console.error('Error formatting date:', dateStr, error);
-        return 'Date inconnue';
+        return gettext('Date unknown');
     }
 }
 
@@ -635,7 +635,7 @@ async function refreshRunningModels() {
                 <td>${model.details?.parameter_size || 'N/A'}</td>
                 <td class="center aligned">
                     <button class="ui red tiny button" onclick="stopModel('${model.name}')">
-                        <i class="stop icon"></i> Arrêter
+                        <i class="stop icon"></i> `+gettext('Stop')+`
                     </button>
                 </td>
             </tr>

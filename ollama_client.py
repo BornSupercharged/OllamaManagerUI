@@ -1,4 +1,5 @@
 import requests
+from flask_babel import gettext
 from requests.exceptions import ConnectionError, RequestException, Timeout
 from models import ModelUsage
 import time
@@ -16,7 +17,7 @@ class OllamaClient:
         self._server_status = None
         self._last_check = 0
         self._check_interval = 5
-        print(f"Initialized OllamaClient with base URL: {self.base_url}")
+        print( gettext("Initialized OllamaClient with base URL: %s" % self.base_url) )
 
     def _get_headers(self):
         headers = {'Content-Type': 'application/json'}
@@ -47,14 +48,14 @@ class OllamaClient:
                 return response.json() if response.content else {}
 
             except ConnectionError:
-                last_error = "Impossible de se connecter au serveur Ollama"
+                last_error = gettext("Unable to connect to Ollama server")
             except Timeout:
-                last_error = "Le délai de connexion au serveur Ollama a expiré"
+                last_error = gettext("Connection to Ollama server timed out")
             except RequestException as e:
                 if hasattr(e, 'response') and e.response and e.response.status_code == 503:
-                    last_error = "Le serveur Ollama n'est pas en cours d'exécution"
+                    last_error = gettext("Ollama server is not running")
                 else:
-                    last_error = f"Erreur serveur: {str(e)}"
+                    last_error = gettext("Server error: %s" % str(e))
 
             retries += 1
             if retries < self.max_retries:
@@ -66,7 +67,7 @@ class OllamaClient:
     def save_model_config(self, model_name, system=None, template=None, parameters=None):
         """Save model configuration by creating a new custom model"""
         try:
-            # Build Modelfile content
+            # Build Model file content
             modelfile = f"FROM {model_name}\n"
 
             # Add parameters if provided
@@ -82,7 +83,7 @@ class OllamaClient:
             if template:
                 modelfile += f'TEMPLATE """{template}"""\n'
 
-            print(f"Creating model with Modelfile:\n{modelfile}")  # Debug log
+            print( gettext("Creating model with file: %s" % modelfile) )  # Debug log
 
             # Create new model using Ollama API with streaming response handling
             url = f'{self.base_url}/api/create'
@@ -118,7 +119,7 @@ class OllamaClient:
             if error:
                 return {'success': False, 'error': error}
 
-            return {'success': True, 'message': f'Configuration du modèle {model_name} mise à jour avec succès'}
+            return {'success': True, 'message': gettext("Configuration for %s saved successfully" % model_name) }
 
         except requests.exceptions.RequestException as e:
             return {'success': False, 'error': str(e)}
@@ -143,7 +144,7 @@ class OllamaClient:
             )
             self._server_status = response.status_code == 200
         except Exception as e:
-            print(f"Server check failed with error: {str(e)}")
+            print( gettext("Server check failed with error: %s" % str(e)) )
             self._server_status = False
 
         self._last_check = current_time
@@ -180,7 +181,7 @@ class OllamaClient:
                 return {'success': False, 'error': running_models['error']}
 
             if not any(model['name'] == model_name for model in running_models.get('models', [])):
-                return {'success': True, 'message': f'Le modèle {model_name} n\'est pas en cours d\'exécution'}
+                return {'success': True, 'message': gettext("The model %s is not running" % model_name)}
 
             # Send stop command
             response = self._handle_request(
@@ -199,9 +200,9 @@ class OllamaClient:
                 return {'success': False, 'error': running_models['error']}
 
             if not any(model['name'] == model_name for model in running_models.get('models', [])):
-                return {'success': True, 'message': f'Le modèle {model_name} a été arrêté avec succès'}
+                return {'success': True, 'message': gettext("The model %s has been stopped successfully" % model_name)}
             else:
-                return {'success': False, 'error': 'Impossible d\'arrêter le modèle'}
+                return {'success': False, 'error': gettext("Unable to stop model %s" % model_name)}
 
         except Exception as e:
             return {'success': False, 'error': str(e)}
@@ -215,7 +216,7 @@ class OllamaClient:
         )
         if 'error' in response:
             return {'success': False, 'error': response['error']}
-        return {'success': True, 'message': f'Le modèle {model_name} a été supprimé avec succès'}
+        return {'success': True, 'message': gettext("The model %s was successfully deleted" % model_name)}
 
     def get_model_stats(self, model_name=None):
         """Get usage statistics for a specific model or all models"""

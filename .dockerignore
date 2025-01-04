@@ -1,0 +1,12 @@
+Documentations
+.git
+.gitignore
+.gitattributes
+.github
+README.md
+*.log
+.env
+.env.*
+.DS_Store
+docker-compose.yml
+Dockerfile

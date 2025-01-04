@@ -30,7 +30,6 @@ babel = Babel(app, locale_selector=get_locale, timezone_selector=get_timezone)
 babel_js = BabelJS(app)
 ollama_client = OllamaClient()
 
-
 # Use a more secure configuration for session cookies
 app.config.update(
     SESSION_COOKIE_SECURE=True,

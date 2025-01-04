@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-01 15:31-0600\n"
+"POT-Creation-Date: 2025-01-03 22:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,201 +17,266 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: static/js/main.js:87
+#: ollama_client.py:20
+#, python-format
+msgid "Initialized OllamaClient with base URL: %s"
+msgstr ""
+
+#: ollama_client.py:51
+msgid "Unable to connect to Ollama server"
+msgstr ""
+
+#: ollama_client.py:53
+msgid "Connection to Ollama server timed out"
+msgstr ""
+
+#: ollama_client.py:56
+msgid "Ollama server is not running"
+msgstr ""
+
+#: ollama_client.py:58
+#, python-format
+msgid "Server error: %s"
+msgstr ""
+
+#: ollama_client.py:86
+#, python-format
+msgid "Creating model with file: %s"
+msgstr ""
+
+#: ollama_client.py:122
+#, python-format
+msgid "Configuration for %s saved successfully"
+msgstr ""
+
+#: ollama_client.py:147
+#, python-format
+msgid "Server check failed with error: %s"
+msgstr ""
+
+#: ollama_client.py:184
+#, python-format
+msgid "The model %s is not running"
+msgstr ""
+
+#: ollama_client.py:203
+#, python-format
+msgid "The model %s has been stopped successfully"
+msgstr ""
+
+#: ollama_client.py:205
+#, python-format
+msgid "Unable to stop model %s"
+msgstr ""
+
+#: ollama_client.py:219
+#, python-format
+msgid "The model %s was successfully deleted"
+msgstr ""
+
+#: static/js/main.js:94
 msgid "Failed to change language"
 msgstr ""
 
-#: static/js/main.js:113
+#: static/js/main.js:120
 msgid "Are you sure you want to stop the model"
 msgstr ""
 
-#: static/js/main.js:129
+#: static/js/main.js:136
 msgid "Failed to stop the model"
 msgstr ""
 
-#: static/js/main.js:133 static/js/main.js:256 static/js/main.js:492
-#: static/js/main.js:1151
+#: static/js/main.js:140 static/js/main.js:263 static/js/main.js:499
+#: static/js/main.js:1158
 msgid "Success"
 msgstr ""
 
-#: static/js/main.js:133 static/js/main.js:256 static/js/main.js:492
+#: static/js/main.js:140 static/js/main.js:263 static/js/main.js:499
 msgid "Model"
 msgstr ""
 
-#: static/js/main.js:133
+#: static/js/main.js:140
 msgid "stopped successfully"
 msgstr ""
 
-#: static/js/main.js:136 static/js/main.js:178 static/js/main.js:229
-#: static/js/main.js:259 static/js/main.js:401 static/js/main.js:415
-#: static/js/main.js:498 static/js/main.js:586 static/js/main.js:639
-#: static/js/main.js:718 static/js/main.js:891 static/js/main.js:937
-#: static/js/main.js:944 static/js/main.js:1072 static/js/main.js:1110
-#: static/js/main.js:1154
+#: static/js/main.js:143 static/js/main.js:185 static/js/main.js:236
+#: static/js/main.js:266 static/js/main.js:408 static/js/main.js:422
+#: static/js/main.js:505 static/js/main.js:593 static/js/main.js:646
+#: static/js/main.js:725 static/js/main.js:898 static/js/main.js:944
+#: static/js/main.js:951 static/js/main.js:1079 static/js/main.js:1117
+#: static/js/main.js:1161
 msgid "Error"
 msgstr ""
 
-#: static/js/main.js:145 static/js/main.js:187
+#: static/js/main.js:152 static/js/main.js:194
 msgid "HTTP Error Status"
 msgstr ""
 
-#: static/js/main.js:190
+#: static/js/main.js:197
 msgid "Operation(s)"
 msgstr ""
 
-#: static/js/main.js:195 static/js/main.js:660 static/js/main.js:917
+#: static/js/main.js:202 static/js/main.js:667 static/js/main.js:924
 msgid "Total Operations"
 msgstr ""
 
-#: static/js/main.js:199 static/js/main.js:664 static/js/main.js:921
+#: static/js/main.js:206 static/js/main.js:671 static/js/main.js:928
 msgid "Total Prompt Tokens"
 msgstr ""
 
-#: static/js/main.js:203
+#: static/js/main.js:210
 msgid "Total Complete Tokens"
 msgstr ""
 
-#: static/js/main.js:207 static/js/main.js:672 static/js/main.js:929
+#: static/js/main.js:214 static/js/main.js:679 static/js/main.js:936
 msgid "Total Duration"
 msgstr ""
 
-#: static/js/main.js:212
+#: static/js/main.js:219
 msgid "Operations by Type"
 msgstr ""
 
-#: static/js/main.js:234
+#: static/js/main.js:241
 msgid "Are you sure you want to delete this model?"
 msgstr ""
 
-#: static/js/main.js:252 static/js/main.js:968
+#: static/js/main.js:259 static/js/main.js:975
 msgid "Failed to delete the model"
 msgstr ""
 
-#: static/js/main.js:256
+#: static/js/main.js:263
 msgid "successfully deleted"
 msgstr ""
 
-#: static/js/main.js:379 static/js/main.js:1048
+#: static/js/main.js:386 static/js/main.js:1055
 msgid "No models found"
 msgstr ""
 
-#: static/js/main.js:415
+#: static/js/main.js:422
 msgid "Please enter a model name"
 msgstr ""
 
-#: static/js/main.js:426 templates/index.html:60
+#: static/js/main.js:433 templates/index.html:80
 msgid "Starting the download..."
 msgstr ""
 
-#: static/js/main.js:427 static/js/main.js:490
+#: static/js/main.js:434 static/js/main.js:497
 msgid "Download complete"
 msgstr ""
 
-#: static/js/main.js:428 static/js/main.js:497
+#: static/js/main.js:435 static/js/main.js:504
 msgid "Error downloading"
 msgstr ""
 
-#: static/js/main.js:444
+#: static/js/main.js:451
 msgid "Failed to download the model"
 msgstr ""
 
-#: static/js/main.js:472
+#: static/js/main.js:479
 msgid "Download progress"
 msgstr ""
 
-#: static/js/main.js:492
+#: static/js/main.js:499
 msgid "downloaded successfully"
 msgstr ""
 
-#: static/js/main.js:532 static/js/main.js:599
+#: static/js/main.js:515 static/js/main.js:520 static/js/main.js:526
+msgid "Date unknown"
+msgstr ""
+
+#: static/js/main.js:539 static/js/main.js:606
 msgid "Ollama server not connected"
 msgstr ""
 
-#: static/js/main.js:541
+#: static/js/main.js:548
 msgid "Unable to retrieve models"
 msgstr ""
 
-#: static/js/main.js:571
+#: static/js/main.js:578
 msgid "Config"
 msgstr ""
 
-#: static/js/main.js:574
+#: static/js/main.js:581
 msgid "Stats"
 msgstr ""
 
-#: static/js/main.js:577
+#: static/js/main.js:584
 msgid "Delete"
 msgstr ""
 
-#: static/js/main.js:583
+#: static/js/main.js:590
 msgid "No Models Installed"
 msgstr ""
 
-#: static/js/main.js:608
+#: static/js/main.js:615
 msgid "Unable to retrieve running models"
 msgstr ""
 
-#: static/js/main.js:636
+#: static/js/main.js:638
+msgid "Stop"
+msgstr ""
+
+#: static/js/main.js:643
 msgid "No Models Running"
 msgstr ""
 
-#: static/js/main.js:654
+#: static/js/main.js:661
 msgid "Failed to fetch stats"
 msgstr ""
 
-#: static/js/main.js:668 static/js/main.js:925
+#: static/js/main.js:675 static/js/main.js:932
 msgid "Total Completion Tokens"
 msgstr ""
 
-#: static/js/main.js:717 static/js/main.js:890
+#: static/js/main.js:724 static/js/main.js:897
 msgid "Please select at least two models to compare"
 msgstr ""
 
-#: static/js/main.js:729
+#: static/js/main.js:736
 msgid "Loading details..."
 msgstr ""
 
-#: static/js/main.js:763
+#: static/js/main.js:770
 msgid "Error loading details"
 msgstr ""
 
-#: static/js/main.js:944
+#: static/js/main.js:951
 msgid "Please select at least one model"
 msgstr ""
 
-#: static/js/main.js:948
+#: static/js/main.js:955
 msgid "Are you sure you want to delete"
 msgstr ""
 
-#: static/js/main.js:949
+#: static/js/main.js:956
 msgid "model(s)"
 msgstr ""
 
-#: static/js/main.js:1065
+#: static/js/main.js:1072
 msgid "Created on"
 msgstr ""
 
-#: static/js/main.js:1084
+#: static/js/main.js:1091
 msgid "Parameter Name"
 msgstr ""
 
-#: static/js/main.js:1088
+#: static/js/main.js:1095
 msgid "Value"
 msgstr ""
 
-#: static/js/main.js:1110
+#: static/js/main.js:1117
 msgid "No models selected"
 msgstr ""
 
-#: static/js/main.js:1146
+#: static/js/main.js:1153
 msgid "Failed to save the configuration"
 msgstr ""
 
-#: static/js/main.js:1151
+#: static/js/main.js:1158
 msgid "Model configuration"
 msgstr ""
 
-#: static/js/main.js:1151
+#: static/js/main.js:1158
 msgid "saved successfully"
 msgstr ""
 
@@ -247,84 +312,84 @@ msgstr ""
 msgid "Vision"
 msgstr ""
 
-#: templates/index.html:64
+#: templates/index.html:83
 msgid "Overall Usage Statistics"
 msgstr ""
 
-#: templates/index.html:66
+#: templates/index.html:85
 msgid "Global Usage Statistics"
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:87
 msgid "Statistics will populate here"
 msgstr ""
 
-#: templates/index.html:76
+#: templates/index.html:95
 msgid "Local Models"
 msgstr ""
 
-#: templates/index.html:79
+#: templates/index.html:98
 msgid "Delete Selected"
 msgstr ""
 
-#: templates/index.html:82
+#: templates/index.html:101
 msgid "Configure Selected"
 msgstr ""
 
-#: templates/index.html:85
+#: templates/index.html:104
 msgid "Compare Selected"
 msgstr ""
 
-#: templates/index.html:88
+#: templates/index.html:107
 msgid "Select All"
 msgstr ""
 
-#: templates/index.html:96
+#: templates/index.html:115
 msgid "Toggle All Models"
 msgstr ""
 
-#: templates/index.html:100 templates/index.html:126
+#: templates/index.html:119 templates/index.html:145
 msgid "Model Name"
 msgstr ""
 
-#: templates/index.html:101 templates/index.html:127
+#: templates/index.html:120 templates/index.html:146
 msgid "Date Modified"
 msgstr ""
 
-#: templates/index.html:102 templates/index.html:128
+#: templates/index.html:121 templates/index.html:147
 msgid "Size"
 msgstr ""
 
-#: templates/index.html:103 templates/index.html:129
+#: templates/index.html:122 templates/index.html:148
 msgid "Format"
 msgstr ""
 
-#: templates/index.html:104 templates/index.html:130
+#: templates/index.html:123 templates/index.html:149
 msgid "Family"
 msgstr ""
 
-#: templates/index.html:105 templates/index.html:131
+#: templates/index.html:124 templates/index.html:150
 #: templates/modals/config.html:18
 msgid "Parameters"
 msgstr ""
 
-#: templates/index.html:106 templates/index.html:132
+#: templates/index.html:125 templates/index.html:151
 msgid "Actions"
 msgstr ""
 
-#: templates/index.html:118
+#: templates/index.html:137
 msgid "Running Models"
 msgstr ""
 
-#: templates/index.html:120
+#: templates/index.html:139
 msgid "Refresh"
 msgstr ""
 
-#: templates/index.html:153
+#: templates/index.html:172
 msgid "Model Comparison"
 msgstr ""
 
-#: templates/index.html:161 templates/modals/batch_results.html:10
+#: templates/index.html:180 templates/modals/batch_results.html:10
 #: templates/modals/stats.html:8
 msgid "Close"
 msgstr ""

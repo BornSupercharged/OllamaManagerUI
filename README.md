@@ -38,12 +38,35 @@ pip install -r requirements.txt
 OLLAMA_SERVER_URL=http://localhost:11434
 ```
 
-4. Start the application:
+## Run Using Python
+Start the application:
 ```bash
 python main.py
 ```
+The application will be accessible at `http://localhost:5000`
 
-The application will be accessible at http://localhost:5000
+## Run Using Docker
+1. Clone the repository:
+```bash
+git clone https://github.com/BornSupercharged/OllamaManagerUI.git
+cd OllamaManagerUI
+```
+
+2. Update your Ollama environment to fit your needs in `docker-compose.yml`:
+```yaml
+    environment:
+      - OLLAMA_SERVER_URL=http://127.0.0.1:11434
+      - FLASK_SECRET_KEY=dev_key_123
+      - BABEL_DEFAULT_LOCALE=en
+      - BABEL_DEFAULT_TIMEZONE=America/Chicago
+      - BABEL_DEFAULT_DATE_FORMAT=YYYY-MM-DD
+```
+
+3. Build and start the container:
+```bash
+docker compose up -d --build
+```
+The application will be available at `http://localhost:5000`
 
 ## Usage
 - Access the web interface through your browser
@@ -57,7 +80,7 @@ The application will be accessible at http://localhost:5000
 source venv/bin/activate
 ```
 
-## Translations
+## Add translations for a new language 
 1. To generate the translation file for all the strings in the project
 ```
 pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
@@ -69,6 +92,22 @@ pybabel init -i messages.pot -d translations -l fr
 ```
 
 3. To update the translation file with new translations
+```
+pybabel update -i messages.pot -d translations
+```
+
+4. Re-compile the translations
+```
+pybabel compile -d translations
+```
+
+## Add to an existing language translation
+1. To generate the translation file for all the strings in the project
+```
+pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
+```
+
+2. To update the translation file with new translations
 ```
 pybabel update -i messages.pot -d translations
 ```
