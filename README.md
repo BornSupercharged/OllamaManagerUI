@@ -5,6 +5,8 @@
 ## Description
 A web interface to manage your Ollama models, built with Flask and Semantic UI.
 
+Multilingual support made possible with Babel. Feel free to contribute your own language translations!
+
 ## Features
 - Model management (search, download, delete, configure)
 - Dark/Light mode (To improve)
@@ -25,7 +27,7 @@ A web interface to manage your Ollama models, built with Flask and Semantic UI.
 ## Requirements
 - Python 3.8+
 - Ollama installed and running
-- Docker OR pip/another Python package manager
+- Docker (recommended) OR pip/another Python package manager
 
 ## Installation
 1. Clone the repository:
@@ -80,7 +82,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4Start the application:
+4. Start the application:
 ```bash
 python main.py
 ```
