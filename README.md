@@ -46,13 +46,7 @@ BABEL_DEFAULT_LOCALE=en # currently en and fr
 
 ## Running Ollama Manager UI
 ### Using Docker
-1. Clone the repository:
-```bash
-git clone https://github.com/BornSupercharged/OllamaManagerUI.git
-cd OllamaManagerUI
-```
-
-2. Update your Ollama environment to fit your needs in `docker-compose.yml`:
+1. Update your Ollama environment to fit your needs in `docker-compose.yml`:
 ```yaml
     environment:
       - OLLAMA_SERVER_URL=http://127.0.0.1:11434
@@ -60,7 +54,7 @@ cd OllamaManagerUI
       - BABEL_DEFAULT_LOCALE=en
 ```
 
-3. Build and start the container:
+2. Build and start the container:
 ```bash
 docker compose up -d --build
 ```
